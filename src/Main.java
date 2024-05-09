@@ -2,14 +2,51 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        System.out.println("\nЗадача 1");
+        int[] expenses = {20_345, 34_873, 27_631, 47_212, 19_654};
+        int total = 0;
+        for (int element : expenses) {
+            total = total + element;
         }
+        System.out.println("Сумма трат за месяц составила " + total + " рублей.");
+
+        System.out.println("\nЗадача 2");
+        int[] spending = {30_235, 45_456, 18_063, 35_965, 11_050};
+        int maxSpending = -1;
+        for (final int current : spending) {
+            if (current > maxSpending) {
+                maxSpending = current;
+            }
+        }
+        int minSpending = maxSpending;
+        for (final int current : spending) {
+            if (current < maxSpending) {
+                minSpending = current;
+            }
+        }
+        System.out.println("Минимальная сумма трат за неделю составила "+ minSpending + " рублей. " +
+                "Максимальная сумма трат за неделю составила " + maxSpending + " рублей.");
+
+        System.out.println("\nЗадача 3");
+        int [] expenditure = {12_678, 34_847, 37_312, 10_234, 43_235};
+        int sum = 0;
+        double mean = 0;
+        for (int element : expenditure) {
+            sum =  sum + element;
+            mean = sum / 5;
+        }
+        System.out.println("Средняя сумма трат за месяц составила " + mean + " рублей.");
+
+        System.out.println("\nЗадача 4");
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i < reverseFullName.length; i--) {
+            if (i <= 0) {
+                System.out.print(reverseFullName[i]);
+                break;
+            }
+            System.out.print(reverseFullName[i]);
+
+        }
+
     }
 }
