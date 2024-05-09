@@ -18,9 +18,9 @@ public class Main {
                 maxSpending = current;
             }
         }
-        int minSpending = maxSpending;
+        int minSpending = Integer.MAX_VALUE;
         for (final int current : spending) {
-            if (current < maxSpending) {
+            if (current < Integer.MAX_VALUE) {
                 minSpending = current;
             }
         }
@@ -33,20 +33,16 @@ public class Main {
         double mean = 0;
         for (int element : expenditure) {
             sum =  sum + element;
-            mean = sum / 5;
         }
+        mean = sum / expenditure.length;
         System.out.println("Средняя сумма трат за месяц составила " + mean + " рублей.");
 
         System.out.println("\nЗадача 4");
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i < reverseFullName.length; i--) {
-            if (i <= 0) {
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
                 System.out.print(reverseFullName[i]);
-                break;
-            }
-            System.out.print(reverseFullName[i]);
-
         }
+
 
     }
 }
